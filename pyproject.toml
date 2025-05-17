@@ -8,6 +8,7 @@ test_packaging = ["**/*.json"]
 
 [project]
 name = "test_packaging-nim"
+version = "0.0.1"
 authors = [{ name = "Enimeesha", email = "some-email@gmail.com" }]
 description = "My package description"
 readme = "README.md"
@@ -16,17 +17,17 @@ keywords = ["one", "two"]
 license = { text = "MIT" }
 classifiers = ["Programming Language :: Python :: 3"]
 dependencies = ["numpy", 'importlib-metadata; python_version<"3.8"']
-dynamic = ["version"]
+# dynamic = ["version"]
 
 [project.optional-dependencies]
 test = ["pytest", "pytest-cov"]
 release = ["build", "twine"]
 static-code-qa = ["pre-commit"]
-dev = ["test_packaging[test,release,static-code-qa]"]
+dev = ["test_packaging-nim[test,release,static-code-qa]"]
 
 # docs: https://setuptools.pypa.io/en/latest/userguide/pyproject_config.html#dynamic-metadata
-[tool.setuptools.dynamic]
-version = { file = "version.txt" }
+# [tool.setuptools.dynamic]
+# version = { file = "version.txt" }
 
 [tool.pytest.ini_options]
 markers = ["slow: marks tests as slow (deselect with '-m \"not slow\"')"]
