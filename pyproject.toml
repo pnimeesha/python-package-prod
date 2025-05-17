@@ -7,7 +7,7 @@ build-backend = "setuptools.build_meta"
 test_packaging = ["**/*.json"]
 
 [project]
-name = "test_packaging"
+name = "test_packaging-nim"
 authors = [{ name = "Enimeesha", email = "some-email@gmail.com" }]
 description = "My package description"
 readme = "README.md"
